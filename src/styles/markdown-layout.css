@@ -1,0 +1,34 @@
+.markdown-page {
+    font-family: "Montserrat Variable", sans-serif;
+    padding: 15px;
+    font-size: 1.3rem;
+    background-color: #C0C0C0;
+    width: 60%;
+    margin: 0 auto;
+}
+
+span {
+    font-family: "Space Mono", monospace;
+}
+
+.markdown-page p {
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.post-meta p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+.markdown-page h1 {
+    font-family: 'Orbitron Variable', sans-serif;
+    margin: 0;
+    font-weight: 600;
+}
+
+.markdown-page h2 {
+    font-family: 'Orbitron Variable', sans-serif;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+}

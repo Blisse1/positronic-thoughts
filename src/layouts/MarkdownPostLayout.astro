@@ -1,17 +1,23 @@
 ---
-import BaseLayout from "./BaseLayout.astro";
+import BaseLayout from "./BaseLayout.astro"
+import '@fontsource/space-mono';
+import '@fontsource-variable/montserrat';
+import '@fontsource-variable/orbitron';
 const { frontmatter } = Astro.props;
+import "../styles/markdown-layout.css"
 const tags = frontmatter.tags;
 ---
-<BaseLayout pageTitle={frontmatter.title}>
-<p>Written by {frontmatter.author}</p>
-<p>Published on {frontmatter.pubDate.toString().slice(0,10)}</p>
-<div class="tags">
-    {tags.map((tag: string) => (
-    <p class="tag">
-    <a href={`/tags/${tag}`}>{tag}</a>
-    </p>
-    ))}
-</div>
-<slot />
+<BaseLayout pageTitle={frontmatter.title} bodyClass="markdown-page">
+    <!-- <div class="post-meta"> -->
+    <!--     <p class="post-author">Written by {frontmatter.author}</p> -->
+    <!--     <p class="post-date">Published on {frontmatter.pubDate.toString().slice(0,10)}</p> -->
+    <!--     <div class="tags"> -->
+    <!--         {tags.map((tag: string) => ( -->
+    <!--         <p class="tag"> -->
+    <!--         <a href={`/tags/${tag}`}>{tag}</a> -->
+    <!--         </p> -->
+    <!--         ))} -->
+    <!--     </div> -->
+    <!-- </div> -->
+    <slot />
 </BaseLayout>
