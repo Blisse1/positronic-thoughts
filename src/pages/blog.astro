@@ -1,12 +1,11 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import BlogPost from "../layouts/BlogPost.astro"
+import CommonLayout from "../layouts/CommonLayout.astro";
+import BlogPost from "../layouts/BlogPost.astro";
 const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
-const pageTitle = "My Astro Learning Blog";
+const pageTitle = "Bliss";
 ---
-<BaseLayout pageTitle={pageTitle}>
-<p>This is my first time with Astro framework!</p>
+<CommonLayout pageTitle={pageTitle}>
 <ul>
     {posts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 </ul>
-</BaseLayout>
+</CommonLayout>
