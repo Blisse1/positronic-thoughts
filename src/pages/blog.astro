@@ -1,11 +1,11 @@
 ---
-import CommonLayout from "../layouts/CommonLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPost from "../layouts/BlogPost.astro";
 const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
 const pageTitle = "Bliss";
 ---
-<CommonLayout pageTitle={pageTitle}>
+<BaseLayout pageTitle={pageTitle}>
 <ul>
     {posts.map((post: any) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
 </ul>
-</CommonLayout>
+</BaseLayout>

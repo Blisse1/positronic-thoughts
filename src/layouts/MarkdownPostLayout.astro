@@ -1,5 +1,6 @@
 ---
-import BaseLayout from "./BaseLayout.astro"
+import PostLayout from "./PostLayout.astro"
+import Header from "../components/Header.astro"
 import '@fontsource/space-mono';
 import '@fontsource-variable/montserrat';
 import '@fontsource-variable/orbitron';
@@ -7,7 +8,9 @@ const { frontmatter } = Astro.props;
 import "../styles/markdown-layout.css"
 const tags = frontmatter.tags;
 ---
-<BaseLayout pageTitle={frontmatter.title} bodyClass="markdown-page">
+<PostLayout pageTitle={frontmatter.title} bodyClass="markdown-page">
+    <Header />
+    <h1>{ frontmatter.title }</h1>
     <!-- <div class="post-meta"> -->
     <!--     <p class="post-author">Written by {frontmatter.author}</p> -->
     <!--     <p class="post-date">Published on {frontmatter.pubDate.toString().slice(0,10)}</p> -->
@@ -20,4 +23,4 @@ const tags = frontmatter.tags;
     <!--     </div> -->
     <!-- </div> -->
     <slot />
-</BaseLayout>
+</PostLayout>
