@@ -1,7 +1,7 @@
 ---
-import CommonLayout from "../layouts/CommonLayout.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 const pageTitle = "About Me";
 ---
-<CommonLayout pageTitle={pageTitle}>
-    <p>Facts about me</p>
-</CommonLayout>
+<BaseLayout pageTitle={pageTitle}>
+   <h1>{ pageTitle }</h1>
+</BaseLayout>
